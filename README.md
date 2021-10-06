@@ -1,2 +1,2 @@
-# tourism-bussiness-predictions
+# Analisa Prediktif Peluang Bisnis Sektor Pariwisata
 Data Academy Champhionsip
