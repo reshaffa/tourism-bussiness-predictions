@@ -11,11 +11,21 @@
   DTS:LocaleID="14345"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{0443ECB1-72A0-4669-9CA4-6992603972B1}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{1A91DA34-3625-4E82-8207-9E293B4730FF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{CA391BE9-85DF-4F7C-9951-005B979E2648}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Artificial Learning\ChampionAcademy\data.jabarprov.go.id\data_province.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Gmaps]"
       DTS:CreationName="FLATFILE"
@@ -183,6 +193,433 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ProviceCSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{8E8B8F0C-F99C-471F-8789-1220E2FF6AFF}"
+      DTS:ObjectName="ProviceCSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="14345"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Artificial Learning\ChampionAcademy\data.jabarprov.go.id\data_propinsi.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Id"
+              DTS:DTSID="{3EE3A034-2FB0-4488-866A-72144B0405B8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nama Propinsi"
+              DTS:DTSID="{630951FC-AFF0-4201-81E8-8B36C1492CFF}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Province Source]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{3CBB6382-AB6C-43B2-B57C-9BDBC2BC5F9C}"
+      DTS:ObjectName="Province Source">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="14345"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\resha\Downloads\covid_19_indonesia_time_series_all (2).csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{7E0A98FE-A4E7-433E-806D-D94A5D9D164F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Location ISO Code"
+              DTS:DTSID="{053AD7B2-BF2E-451F-8F07-8491B5F02FC0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Location"
+              DTS:DTSID="{5B1C7042-B0DB-437E-AFDB-B3B284E2337D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="New Cases"
+              DTS:DTSID="{7390411D-D372-4934-9116-6FAC99FD9499}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="New Deaths"
+              DTS:DTSID="{8C2197E1-4C6F-435F-A8E4-1FCDBED19177}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="New Recovered"
+              DTS:DTSID="{8DCF606D-2207-4885-B6F3-DDEE25B33E1A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="New Active Cases"
+              DTS:DTSID="{BC8B40C6-74CD-45B0-9CFA-8EDD6745DFE6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Cases"
+              DTS:DTSID="{5072374C-7236-40D8-9849-452100ED213B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Deaths"
+              DTS:DTSID="{D4927F54-6438-42A4-A8C5-82D05FF711C8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Recovered"
+              DTS:DTSID="{68A5EFD1-3DB7-41F9-A496-BD0575DBA5CB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Active Cases"
+              DTS:DTSID="{3534113D-3654-4ABC-80AD-318050536CD8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Location Level"
+              DTS:DTSID="{B909E311-8395-4DF4-BCC9-BACDEEF8C0DA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="City or Regency"
+              DTS:DTSID="{CB321542-E508-44D8-AE35-876968D669C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Province"
+              DTS:DTSID="{29280D48-9645-4881-9AE9-69DD6B470F6E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{E69BF1C7-9D5A-4161-8B4E-B02C1A59DDDD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Continent"
+              DTS:DTSID="{A6D7C2E6-46F5-4FC2-84EC-2D2AADE2F750}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Island"
+              DTS:DTSID="{E4DFF10A-EA47-48AF-80CD-71C7AF632AB3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Time Zone"
+              DTS:DTSID="{20F1B91E-EE57-4775-BCF6-B7DD4690CDF5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Special Status"
+              DTS:DTSID="{C8C11684-2120-428B-85F6-9F4648BCDBAB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Regencies"
+              DTS:DTSID="{2CDF802B-417B-4513-AE3A-4A719380C734}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Cities"
+              DTS:DTSID="{980E3FEB-70D4-4C7A-97E7-F9104B636B44}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Districts"
+              DTS:DTSID="{7BD1FD6C-ABBF-45D2-A00A-65018EBD2BC1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Urban Villages"
+              DTS:DTSID="{36FDED9C-EE79-4407-85A7-5A32D9D73339}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Rural Villages"
+              DTS:DTSID="{908BE2C7-77A0-425C-930B-8CF425DB09D5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Area (km2)"
+              DTS:DTSID="{9C3C3992-77B2-41C1-81B6-12D4FBE4C924}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Population"
+              DTS:DTSID="{887688E9-949B-40A5-BB05-19E736A929FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Population Density"
+              DTS:DTSID="{195BDB2A-C850-4373-8425-1E7AE3ED38D5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Longitude"
+              DTS:DTSID="{25051C06-BCBF-4A01-B0AB-B6D234AE6CC4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Latitude"
+              DTS:DTSID="{A6749EE8-115A-4E8C-9112-AF5A0A69979D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="New Cases per Million"
+              DTS:DTSID="{2242BCA6-C07A-44E8-A2E3-2A53463B4B38}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Cases per Million"
+              DTS:DTSID="{63984CA4-744E-4CCF-AD1F-CDF69490AF08}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="New Deaths per Million"
+              DTS:DTSID="{1B97A323-DA2D-4785-ACE4-33C4AB5699A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Deaths per Million"
+              DTS:DTSID="{950B91EC-B049-45AB-8643-87CA83F003D0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Case Fatality Rate"
+              DTS:DTSID="{5A537D62-7E26-4C26-B34F-E74AA747719F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Case Recovered Rate"
+              DTS:DTSID="{C9FE490D-2D3F-4A28-8823-BD28210F3074}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Growth Factor of New Cases"
+              DTS:DTSID="{87C6FD9A-7CFC-4899-972B-0E8A4793014B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Growth Factor of New Deaths"
+              DTS:DTSID="{F2DC2577-260E-4DC1-ADA1-389EACB158EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Name"
+              DTS:DTSID="{858EF73F-37F3-4F31-8103-E10543AD9B7D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Item"
+              DTS:DTSID="{F23B5226-69A4-4EE4-AF5E-7D86BFD29B14}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Kind"
+              DTS:DTSID="{DC12A7C7-7E62-4DA9-8892-9813228F9B94}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hidden"
+              DTS:DTSID="{CBC66772-F62D-4779-957C-98A7D1D26C23}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Source Destination]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{0FFDC714-53C3-4431-9ABE-67AE648294BD}"
@@ -317,6 +754,7 @@
       DTS:refId="Package\Jabar Country"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{8B19C7BD-B667-46C3-B261-CDBAE1CA3478}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -1961,6 +2399,633 @@
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Province"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{FA7A8B83-58F6-47E9-9F49-3458A9EA04E9}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Province"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Province\Data Conversion 1"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Province\Data Conversion 1.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Province\Data Conversion 1.Inputs[Data Conversion Input].Columns[Province]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Province"
+                      lineageId="Package\Province\Province.Outputs[Flat File Source Output].Columns[Province]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Province\Data Conversion 1.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Province\Data Conversion 1.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Province\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of Province]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Province\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of Province]"
+                      name="Copy of Province"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Province\Province.Outputs[Flat File Source Output].Columns[Province]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Province\Data Conversion 1.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Province\Data Conversion 1.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Province\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Province\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Province\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Province\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Province\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Province\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Province\Derived Column.Inputs[Derived Column Input].Columns[Copy of Province]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Copy of Province"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Province\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of Province]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[UPPER](#{Package\Province\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of Province]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">UPPER([Copy of Province])</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Province\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Province\Derived Column.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Province\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Province\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Province\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Province\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Province\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Province\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Province\Excel Destination"
+              componentClassID="Microsoft.ExcelDestination"
+              contactInfo="Excel Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Excel Destination"
+              name="Excel Destination"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Sheet1$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Province\Excel Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Province\Excel Destination.Inputs[Excel Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Excel Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Province\Excel Destination.Inputs[Excel Destination Input].Columns[Copy of Province]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Copy of Province"
+                      externalMetadataColumnId="Package\Province\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[F1]"
+                      lineageId="Package\Province\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of Province]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Province\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[F1]"
+                      dataType="wstr"
+                      length="255"
+                      name="F1" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Province\Excel Destination.Outputs[Excel Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Excel Destination Error Output"
+                  synchronousInputId="Package\Province\Excel Destination.Inputs[Excel Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Province\Excel Destination.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Province\Excel Destination.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Province\Excel Destination.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Province\Excel Destination.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Province\Province"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="14345"
+              name="Province"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Province\Province.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Province Source]"
+                  connectionManagerRefId="Package.ConnectionManagers[Province Source]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Province\Province.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].Columns[Province]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Province]"
+                      length="50"
+                      lineageId="Package\Province\Province.Outputs[Flat File Source Output].Columns[Province]"
+                      name="Province"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Location ISO Code]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Location ISO Code" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Location]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Location" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[New Cases]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="New Cases" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[New Deaths]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="New Deaths" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[New Recovered]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="New Recovered" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[New Active Cases]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="New Active Cases" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Total Cases]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Total Cases" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Total Deaths]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Total Deaths" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Total Recovered]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Total Recovered" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Total Active Cases]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Total Active Cases" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Location Level]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Location Level" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[City or Regency]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="City or Regency" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Province]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Province" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Continent]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Continent" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Island]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Island" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Time Zone]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Time Zone" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Special Status]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Special Status" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Total Regencies]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Total Regencies" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Total Cities]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Total Cities" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Total Districts]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Total Districts" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Total Urban Villages]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Total Urban Villages" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Total Rural Villages]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Total Rural Villages" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Area (km2)]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Area (km2)" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Population]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Population" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Population Density]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Population Density" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Longitude]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Latitude]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[New Cases per Million]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="New Cases per Million" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Total Cases per Million]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Total Cases per Million" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[New Deaths per Million]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="New Deaths per Million" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Total Deaths per Million]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Total Deaths per Million" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Case Fatality Rate]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Case Fatality Rate" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Case Recovered Rate]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Case Recovered Rate" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Growth Factor of New Cases]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Growth Factor of New Cases" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Growth Factor of New Deaths]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Growth Factor of New Deaths" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Name]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Item]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Item" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Kind]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Kind" />
+                    <externalMetadataColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Output].ExternalColumns[Hidden]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Hidden" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Province\Province.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Province\Province.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Province\Province.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Province\Province.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Province\Province.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Province.Paths[Data Conversion Output]"
+              endId="Package\Province\Derived Column.Inputs[Derived Column Input]"
+              name="Data Conversion Output"
+              startId="Package\Province\Data Conversion 1.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Province.Paths[Derived Column Output]"
+              endId="Package\Province\Excel Destination.Inputs[Excel Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Province\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Province.Paths[Flat File Source Output]"
+              endId="Package\Province\Data Conversion 1.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Province\Province.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -1977,7 +3042,11 @@
         <NodeLayout
           Size="146.666666666667,42.6666666666667"
           Id="Package\Jabar Country"
-          TopLeft="127.499998100102,53.3684220571597" />
+          TopLeft="128.124998090789,55.4210536747428" />
+        <NodeLayout
+          Size="121.333333333334,42.6666666666667"
+          Id="Package\Province"
+          TopLeft="131.249998044223,142.315792152426" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -2159,5 +3228,120 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <TaskHost
+    design-time-name="Package\Province">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="121.333333333334,42.6666666666667"
+          Id="Package\Province\Province"
+          TopLeft="202,67" />
+        <NodeLayout
+          Size="168,42.6666666666667"
+          Id="Package\Province\Data Conversion 1"
+          TopLeft="476,69" />
+        <EdgeLayout
+          Id="Package\Province.Paths[Flat File Source Output]"
+          TopLeft="323.333333333333,89.3333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="152.666666666667,0"
+              Start="0,0"
+              End="145.166666666667,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="145.166666666667,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\Province\Derived Column"
+          TopLeft="482,193" />
+        <EdgeLayout
+          Id="Package\Province.Paths[Data Conversion Output]"
+          TopLeft="560,111.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,81.3333333333333"
+              Start="0,0"
+              End="0,73.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,73.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="162.666666666667,42.6666666666667"
+          Id="Package\Province\Excel Destination"
+          TopLeft="903,224" />
+        <EdgeLayout
+          Id="Package\Province.Paths[Derived Column Output]"
+          TopLeft="638,214.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="265,31"
+              Start="0,0"
+              End="257.5,31">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="128.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="128.5,0"
+                    Point2="132.5,0"
+                    Point3="132.5,4" />
+                  <mssgle:LineSegment
+                    End="132.5,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="132.5,27"
+                    Point2="132.5,31"
+                    Point3="136.5,31" />
+                  <mssgle:LineSegment
+                    End="257.5,31" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Province\Excel Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
